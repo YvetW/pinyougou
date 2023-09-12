@@ -31,7 +31,10 @@ a:hover {
 }
 
 button, input {
-    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /*手动去掉默认灰色边框*/
+    border: 0;
+    outline: none;
 }
 
 body {
