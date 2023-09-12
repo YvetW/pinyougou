@@ -1,0 +1,203 @@
+/*首页专有模块main start*/
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    content: '\e666';
+    margin-left: 9px;
+    font-family: iconfont;
+}
+
+.news-bd {
+    padding: 5px 15px 0;
+}
+
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li a i {
+    display: inline-block;
+    margin-top: 13px;
+
+}
+
+.lifeservice ul li:nth-child(1) a i {
+    background: url('../images/icons.png') no-repeat -17px -16px;
+    width: 24px;
+    height: 24px;
+}
+
+.lifeservice ul li:nth-child(2) a i {
+    position: relative;
+    background: url('../images/icons.png') no-repeat -78px -16px;
+    width: 26px;
+    height: 24px;
+}
+
+.lifeservice ul li:nth-child(3) a i {
+    background: url('../images/icons.png') no-repeat -141px -16px;
+    width: 24px;
+    height: 24px;
+}
+
+.lifeservice ul li:nth-child(4) a i {
+    background: url('../images/icons.png') no-repeat -20px -16px;
+    width: 26px;
+    height: 24px;
+}
+
+.lifeservice ul li:nth-child(5) a i {
+    background: url('../images/icons.png') no-repeat -17px -88px;
+    width: 24px;
+    height: 23px;
+}
+
+.lifeservice ul li:nth-child(6) a i {
+    background: url('../images/icons.png') no-repeat -78px -88px;
+    width: 26px;
+    height: 23px;
+}
+
+.lifeservice ul li:nth-child(7) a i {
+    background: url('../images/icons.png') no-repeat -141px -88px;
+    width: 24px;
+    height: 23px;
+}
+
+.lifeservice ul li:nth-child(8) a i {
+    background: url('../images/icons.png') no-repeat -206px -88px;
+    width: 26px;
+    height: 23px;
+}
+
+.lifeservice ul li:nth-child(9) a i {
+    background: url('../images/icons.png') no-repeat -17px -159px;
+    width: 24px;
+    height: 27px;
+}
+
+.lifeservice ul li:nth-child(10) a i {
+    background: url('../images/icons.png') no-repeat -78px -159px;
+    width: 26px;
+    height: 27px;
+}
+
+.lifeservice ul li:nth-child(11) a i {
+    background: url('../images/icons.png') no-repeat -141px -159px;
+    width: 24px;
+    height: 18px;
+}
+
+.lifeservice ul li:nth-child(12) a i {
+    background: url('../images/icons.png') no-repeat -206px -159px;
+    width: 26px;
+    height: 27px;
+}
+
+.discount {
+    position: relative;
+}
+
+.discount_icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 15px;
+    background: url("../images/discount-icon.png") no-repeat;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+/*推荐模块*/
+.recom {
+    height: 163px;
+    background-color: pink;
+    margin-top: 12px;
+}
+
+.recom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
