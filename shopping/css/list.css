@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 4247115 */
+    src: url('../fonts/iconfont.woff2?t=1694456645710') format('woff2'),
+    url('../fonts/iconfont.woff?t=1694456645710') format('woff'),
+    url('../fonts/iconfont.ttf?t=1694456645710') format('truetype');
+}
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding:3px 0 3px 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+    padding: 0 30px;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+    padding: 0 23px;
+}
+
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: '\e665';
+    font-family: iconfont;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
