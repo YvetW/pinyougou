@@ -1,0 +1,121 @@
+/*商品模块*/
+body {
+    height: 3000px;
+}
+
+.product {
+    height: 607px;
+    /*background-color: pink;*/
+}
+
+.product-image,
+.product-introduce {
+    float: left;
+}
+
+.product-image {
+    width: 480px;
+    height: 607px;
+}
+
+.product-nav {
+    height: 48px;
+    padding-top: 18px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.product-nav a:nth-of-type(-n+3)::after {
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    margin: 0 18px;
+    border-top: 1px solid #666666;
+    border-right: 1px solid #666666;
+    transform: rotate(45deg);
+}
+
+.product-big-image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ededed;
+}
+
+.product-big-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thumbnail {
+    position: relative;
+    margin-top: 63px;
+    margin-bottom: 23px;
+    padding-left: 50px;
+}
+
+.thumbnail::before {
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-bottom: 5px solid #dddddd;
+    border-left: 5px solid #dddddd;
+    transform: rotate(45deg);
+}
+
+.thumbnail::after {
+    position: absolute;
+    top: 13px;
+    right: 88px;
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-top: 5px solid #dddddd;
+    border-right: 5px solid #dddddd;
+    transform: rotate(45deg);
+}
+
+.product-small-image1 {
+    display: inline-block;
+    width: 60px;
+}
+
+.share {
+    padding: 0 35px;
+}
+
+.share::before {
+    display: inline-block;
+    content: '';
+    background: url("../images/share.png") no-repeat;
+    width: 9px;
+    height: 9px;
+}
+
+.followers::before {
+    display: inline-block;
+    content: '';
+    background: url("../images/follow.png") no-repeat;
+    width: 9px;
+    height: 9px;
+}
+
+.followers {
+    padding-right: 55px;
+}
+
+.compare {
+    vertical-align: middle;
+}
+
+.product-introduce {
+    width: 720px;
+    height: 607px;
+    background-color: skyblue;
+}
