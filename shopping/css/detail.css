@@ -8,6 +8,7 @@ body {
     /*background-color: pink;*/
 }
 
+/*图片*/
 .product-image,
 .product-introduce {
     float: left;
@@ -43,11 +44,47 @@ body {
     border: 1px solid #ededed;
 }
 
-.product-big-image img {
+.product-big-image>img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+/*放大镜遮罩层*/
+.mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #fede4f;
+    opacity: .5;
+    border: 1px solid #cccccc;
+    cursor: move;
+}
+
+.big {
+    display: none;
+    position: absolute;
+    top: -4px;
+    left: 410px;
+    width: 500px;
+    height: 500px;
+    /*提高层级，避免被遮*/
+    z-index: 9999;
+    border: 1px solid #cccccc;
+    /*图片可能会超过边框，添加隐藏*/
+    overflow: hidden;
+}
+
+.big img {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .thumbnail {
@@ -114,8 +151,208 @@ body {
     vertical-align: middle;
 }
 
+/*标题型号*/
 .product-introduce {
     width: 720px;
     height: 607px;
-    background-color: skyblue;
+    font-size: 12px;
+}
+
+.product-introduce h4 {
+    height: 74px;
+    padding-top: 40px;
+    font-size: 16px;
+    color: #333;
+}
+
+.product-introduce > p {
+    height: 33px;
+    color: #e12228;
+}
+
+.product-price {
+    height: 113px;
+    background-color: #fee9eb;
+    color: #999999;
+}
+
+.product-price > div {
+    float: left;
+}
+
+.product-item-title {
+    width: 70px;
+    padding: 0 13px 0 8px;
+    color: #666666;
+}
+
+.product-price-title p {
+    padding-top: 15px;
+}
+
+.product-price-content {
+    width: 555px;
+    height: 113px;
+}
+
+.product-price-content div {
+    height: 42px;
+}
+
+.product-price-content div span:nth-of-type(1) {
+    color: #e12228;
+    font-size: 15px;
+}
+
+.product-price-content div span:nth-of-type(2) {
+    color: #e12228;
+    font-size: 22px;
+}
+
+.product-price-content div span:nth-of-type(3) {
+    color: #c81623;
+}
+
+.product-price-content p {
+    line-height: 28px;
+}
+
+.product-price-content p span {
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    background-color: #c81623;
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.product-price-content p a {
+    color: #999999;
+}
+
+.product-price-review {
+    height: 113px;
+    padding-top: 13px;
+}
+
+.product-price-review span:nth-of-type(2) {
+    color: #1474af;
+}
+
+.address {
+    width: 548px;
+    height: 98px;
+    border-bottom: 1px solid #ededed;
+}
+
+.product-item-title,
+.address-content {
+    float: left;
+}
+
+.address-content {
+    line-height: 28px;
+    color: #999999;
+}
+
+.address-title p {
+    padding-top: 13px;
+}
+
+.address-content p:nth-of-type(1) {
+    padding-top: 10px;
+}
+
+.product-model {
+    width: 548px;
+    height: 236px;
+}
+
+.product-model-title p {
+    padding-top: 26px;
+}
+
+.product-model-content ul li {
+    float: left;
+    height: 33px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    line-height: 33px;
+    color: #333333;
+}
+
+.product-model-content ul {
+    overflow: hidden;
+}
+
+.product-model-content .model-color li {
+    width: 82px;
+    height: 44px;
+    margin-top: 15px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.add-to-cart {
+    overflow: hidden;
+    /*width: 238px;*/
+    height: 53px;
+}
+
+.add-to-cart div,
+.add-to-cart button {
+    float: left;
+}
+
+.number-to-cart {
+    width: 50px;
+    height: 46px;
+    margin-top: 7px;
+    border: 1px solid #cccccc;
+}
+
+.number-display {
+    width: 33px;
+    height: 46px;
+    border-right: 1px solid #cccccc;
+    line-height: 46px;
+    text-align: center;
+    color: #000;
+}
+
+.number-to-cart div:nth-of-type(2) {
+    background-color: #f1f1f1;
+    height: 44px;
+}
+
+.plus,
+.minus {
+    display: block;
+    width: 15px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.plus {
+    border-bottom: 1px solid #cccccc;
+}
+
+.add-to-cart button {
+    width: 142px;
+    height: 46px;
+    margin: 7px 22px 0 8px;
+    background-color: #c81623;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.cart-line {
+    width: 313px;
+    height: 53px;
+    border-top: 1px solid #ededed;
 }
