@@ -11,6 +11,7 @@
     float: left;
     width: 721px;
     height: 455px;
+    overflow: hidden;
 }
 
 /*左右按钮*/
@@ -27,6 +28,7 @@
     line-height: 30px;
     color: #fff;
     font-size: 16px;
+    z-index: 2;
 }
 
 .prev {
@@ -43,7 +45,7 @@
 
 .prev:hover,
 .next:hover {
-    color: #ffffff;
+    color: #c81623;
 }
 
 .focus img {
@@ -52,8 +54,11 @@
 }
 
 .focus ul {
-    /*4张图，父亲的4倍*/
-    width: 400%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*4张图，父亲的4倍400%，加上克隆的一张，改宽一点*/
+    width: 600%;
 }
 
 .focus ul li {
