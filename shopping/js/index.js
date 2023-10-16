@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    //1. 获取元素
+    // 1. 获取元素
     var prev = document.querySelector('.prev');
     var next = document.querySelector('.next');
     var focus = document.querySelector('.focus');
