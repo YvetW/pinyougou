@@ -7,9 +7,82 @@
 }
 
 .focus {
+    position: relative;
     float: left;
     width: 721px;
     height: 455px;
+}
+
+/*左右按钮*/
+.prev,
+.next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.prev {
+    left: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.next {
+    right: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.prev:hover,
+.next:hover {
+    color: #ffffff;
+}
+
+.focus img {
+    width: 721px;
+    height: 455px;
+}
+
+.focus ul {
+    /*4张图，父亲的4倍*/
+    width: 400%;
+}
+
+.focus ul li {
+    float: left;
+}
+
+/*小圆圈*/
+.circle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 13px;
+    padding: 0 4px;
+    background-color: rgba(225, 225, 225, .3);
+    border-radius: 7px;
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.circle .current {
+    background-color: #c81623;
 }
 
 .newsflash {
