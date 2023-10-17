@@ -91,55 +91,67 @@ window.addEventListener('load', function () {
     var num = 0;
     // circle控制小圆圈的播放。
     var circle = 0;
+    // flag 节流阀
+    var flag = true;
     next.addEventListener('click', function () {
-        // 如果走到了最后复制的一张图片，此时ul要快速复原，left改为0
-        if (num === ul.children.length - 1) {
-            ul.style.left = 0;
-            num = 0;
+        if (flag) {
+            flag = false; // 关闭节流阀
+            // 如果走到了最后复制的一张图片，此时ul要快速复原，left改为0
+            if (num === ul.children.length - 1) {
+                ul.style.left = 0;
+                num = 0;
+            }
+            num++;
+            animate(ul, -num * focusWidth, function () {
+                flag = true; // 打开节流阀
+            });
+            // 8. 点击右侧按钮，小圆圈跟随变化，再声明一个变量circle控制小圆圈的播放
+            circle++;
+            // 如果circle == 4，说明走到最后克隆的这张图片了
+            if (circle === ol.children.length) {
+                circle = 0;
+            }
+            // 清除小圆圈类名设置current，左右按钮都有，封装成函数
+            circleChange();
+            /*// 清除所有小圆圈的current类名
+            for (var i = 0; i < ol.children.length; i++) {
+                ol.children[i].className = '';
+            }
+            // 留下当前小圆圈的current类名
+            ol.children[circle].className = 'current';*/
         }
-        num++;
-        animate(ul, -num * focusWidth);
-        // 8. 点击右侧按钮，小圆圈跟随变化，再声明一个变量circle控制小圆圈的播放
-        circle++;
-        // 如果circle == 4，说明走到最后克隆的这张图片了
-        if (circle === ol.children.length) {
-            circle = 0;
-        }
-        // 清除小圆圈类名设置current，左右按钮都有，封装成函数
-        circleChange();
-        /*// 清除所有小圆圈的current类名
-        for (var i = 0; i < ol.children.length; i++) {
-            ol.children[i].className = '';
-        }
-        // 留下当前小圆圈的current类名
-        ol.children[circle].className = 'current';*/
     });
 
     // 9. 左侧按钮做法
     prev.addEventListener('click', function () {
-        // 走到第一张图片，快速跳到第5张，移动的距离是最后一个的索引号乘以盒子的宽度
-        if (num === 0) {
-            num = ul.children.length - 1;
-            ul.style.left = -num * focusWidth + 'px';
+        if (flag) {
+            flag = false;
+            // 走到第一张图片，快速跳到第5张，移动的距离是最后一个的索引号乘以盒子的宽度
+            if (num === 0) {
+                num = ul.children.length - 1;
+                ul.style.left = -num * focusWidth + 'px';
+            }
+            num--;
+            animate(ul, -num * focusWidth, function () {
+                flag = true;
+            });
+            // 8. 点击右侧按钮，小圆圈跟随变化，再声明一个变量circle控制小圆圈的播放
+            circle--;
+            // 如果circle < 0，说明走到第一张图片，小圆圈要改为第四个小圆圈（索引号3）
+            /*if (circle < 0) {
+                circle = ol.children.length - 1;
+            }*/
+            // 改成三元表达式更简洁
+            circle = circle < 0 ? ol.children.length - 1 : circle;
+            // 清除小圆圈类名设置current，左右按钮都有，封装成函数
+            circleChange();
+            /*// 清除所有小圆圈的current类名
+            for (var i = 0; i < ol.children.length; i++) {
+                ol.children[i].className = '';
+            }
+            // 留下当前小圆圈的current类名
+            ol.children[circle].className = 'current';*/
         }
-        num--;
-        animate(ul, -num * focusWidth);
-        // 8. 点击右侧按钮，小圆圈跟随变化，再声明一个变量circle控制小圆圈的播放
-        circle--;
-        // 如果circle < 0，说明走到第一张图片，小圆圈要改为第四个小圆圈（索引号3）
-        /*if (circle < 0) {
-            circle = ol.children.length - 1;
-        }*/
-        // 改成三元表达式更简洁
-        circle = circle < 0 ? ol.children.length - 1 : circle;
-        // 清除小圆圈类名设置current，左右按钮都有，封装成函数
-        circleChange();
-        /*// 清除所有小圆圈的current类名
-        for (var i = 0; i < ol.children.length; i++) {
-            ol.children[i].className = '';
-        }
-        // 留下当前小圆圈的current类名
-        ol.children[circle].className = 'current';*/
     });
 
     function circleChange() {
