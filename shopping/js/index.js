@@ -1,3 +1,4 @@
+// 轮播图 start
 window.addEventListener('load', function () {
     // 1. 获取元素
     var prev = document.querySelector('.prev');
@@ -169,3 +170,54 @@ window.addEventListener('load', function () {
         next.click();
     }, 2000);
 })
+
+// 轮播图 end
+
+// 固定电梯导航 start
+$(function () {
+    // 当点击li，此时不需要执行页面滚动事件里面的li的背景选择，即添加current
+    //节流阀 互斥锁
+    var flag = true;
+
+    // 1. 显示隐藏电梯导航
+    toggleTool();
+    function toggleTool() {
+        if ($(document).scrollTop() >= $('.recom').offset().top) {
+            $('.fixedtool').fadeIn();
+        } else {
+            $('.fixedtool').fadeOut();
+        }
+    }
+
+    $(window).scroll(function () {
+        toggleTool();
+        // 4. 当页面滚动到内容各区域某个模块，左侧电梯导航，相对应的li模块，也会添加current类，兄弟移除current类名
+        if (flag) {
+            $('.floor .w').each(function (i, ele) {
+                if ($(document).scrollTop() >= $(ele).offset().top) {
+                    // console.log(i)
+                    $('.fixedtool li').eq(i).addClass('current').siblings().removeClass();
+                }
+            })
+        }
+    });
+
+    // 2. 点击电梯导航页面可以滚动到相应内容区域
+    $('.fixedtool li').click(function () {
+        flag = false;
+        // 每次点击li，需要计算出页面要去的位置
+        // 对应当前索引号的内容区模块的offset().top
+        var current = $('.floor .w').eq($(this).index()).offset().top;
+        // 页面动画滚动效果
+        $('body, html').stop().animate({
+            scrollTop: current
+        }, function () {
+            flag = true
+        });
+        // 3. 点击之后，当前li添加current类，兄弟移除current类名
+        $(this).addClass('current').siblings().removeClass();
+    });
+
+
+})
+// 固定电梯导航 end
