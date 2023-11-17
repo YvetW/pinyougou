@@ -9,6 +9,7 @@
     <link href="favicon.ico" rel="shortcut icon"/>
     <link href="css/base.css" rel="stylesheet">
     <link href="css/register.css" rel="stylesheet">
+    <script src="js/register.js"></script>
 </head>
 <body>
 <div class="w">
@@ -29,23 +30,31 @@
             <form action="">
                 <ul>
                     <li>
-                        <label for="">手机号：</label><input class="inp" name="" type="text">
-                        <span class="error"><i class="error_icon"></i> 手机号码格式不正确，请重新输入</span>
+                        <label for="tel">手机号：</label><input class="inp" name="" type="text" id="tel">
+                        <span></span>
                     </li>
                     <li>
-                        <label for="">短信验证码：</label><input class="inp" name="" type="text">
-                        <span class="success"><i class="success_icon"></i> 短信验证码输入正确</span>
+                        <label for="qq">QQ：</label><input class="inp" name="" type="text" id="qq">
+                        <span></span>
                     </li>
                     <li>
-                        <label for="">登录密码：</label><input class="inp" name="" type="password">
-                        <span class="error"><i class="error_icon"></i> 密码不少于6位数，请重新输入</span>
+                        <label for="nickname">昵称：</label><input class="inp" name="" type="text" id="nickname">
+                        <span></span>
+                    </li>
+                    <li>
+                        <label for="message">短信验证码：</label><input class="inp" name="" type="text" id="message">
+                        <span></span>
+                    </li>
+                    <li>
+                        <label for="password">登录密码：</label><input class="inp" name="" type="password" id="password">
+                        <span></span>
                     </li>
                     <li class="safe">
                         安全程度 <em class="ruo">弱</em> <em class="zhong">中</em> <em class="qiang">强</em>
                     </li>
                     <li>
-                        <label for="">确认密码：</label><input class="inp" name="" type="password">
-                        <span class="error"><i class="error_icon"></i> 密码不一致，请重新输入</span>
+                        <label for="passwordConfirm">确认密码：</label><input class="inp" name="" type="password" id="passwordConfirm">
+                        <span></span>
                     </li>
                     <li class="agree">
                         <input id="" name="" type="checkbox">&nbsp;&nbsp;同意协议并注册 <a href="#">用户协议</a>
